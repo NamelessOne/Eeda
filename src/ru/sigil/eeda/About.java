@@ -8,6 +8,7 @@ import android.widget.TextView;
 public class About extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//111
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.about);
 		TextView tv = (TextView) findViewById(R.id.about_content);
