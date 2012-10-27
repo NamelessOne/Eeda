@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background_states"
+    android:focusable="false"
+    android:gravity="center"
+    android:minHeight="40dp"
+    android:orientation="horizontal"
+    android:weightSum="320" >
+
+    <!--
+    <ImageView
+        android:id="@+id/MainListViewLeftImage"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left"
+        android:layout_weight="60"
+        android:adjustViewBounds="true"
+        android:padding="3dp"
+        android:scaleType="fitStart" />
+    -->
+
+    <TextView
+        android:id="@+id/MainListViewTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="296"
+        android:textColor="@color/list_element_text"
+        android:padding="3dp" />
+
+    <ImageView
+        android:id="@+id/MainListViewRightImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="24"
+        android:adjustViewBounds="true"
+        android:padding="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/arrow" />
+
+</LinearLayout>

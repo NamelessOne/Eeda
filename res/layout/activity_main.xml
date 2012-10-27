@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:weightSum="480" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/MainHeadLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@drawable/head_gradient"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:weightSum="320" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:layout_weight="56"
+            android:adjustViewBounds="true"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo2" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="264"
+            android:gravity="center"
+            android:text="@string/head_text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/SearchLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@drawable/search_gradient"
+        android:minHeight="40dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp" >
+
+        <EditText
+            android:id="@+id/mainSearchEditText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/MainListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="380"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/list_separator_color"
+        android:dividerHeight="1dp"
+        android:padding="3dp" />
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_publisher_id"
+        ads:loadAdOnCreate="true" />
+
+</LinearLayout>

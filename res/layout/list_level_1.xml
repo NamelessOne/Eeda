@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:weightSum="480" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Level1HeadRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@drawable/head_gradient"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:weightSum="320" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:layout_weight="56"
+            android:adjustViewBounds="true"
+            android:background="@drawable/back_arrow_background"
+            android:onClick="headBackClick"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="264"
+            android:gravity="center"
+            android:padding="3dp"
+            android:id="@+id/hundreds_head_text"
+            android:text="@string/head_text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/MainListView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="430"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/list_separator_color"
+        android:dividerHeight="1dp"
+        android:padding="3dp" />
+
+</LinearLayout>

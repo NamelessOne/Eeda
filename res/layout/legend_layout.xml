@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical"
+    android:weightSum="480" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Level1HeadRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@drawable/head_gradient"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:weightSum="320" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:layout_weight="56"
+            android:adjustViewBounds="true"
+            android:background="@drawable/back_arrow_background"
+            android:onClick="headBackClick"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="264"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/legend"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="430" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="320" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="56"
+                    android:adjustViewBounds="true"
+                    android:cacheColorHint="#00000000"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/accepted" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:padding="3dp"
+                android:text="@string/accepted_text"
+                android:textColor="@color/element_text" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="320" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="56"
+                    android:adjustViewBounds="true"
+                    android:cacheColorHint="#00000000"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/warning" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:padding="3dp"
+                android:text="@string/warning_text"
+                android:textColor="@color/element_text" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="320" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="56"
+                    android:adjustViewBounds="true"
+                    android:cacheColorHint="#00000000"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/banned" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:padding="3dp"
+                android:text="@string/banned_text"
+                android:textColor="@color/element_text" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:padding="3dp"
+                android:text="@string/documents"
+                android:textColor="@color/element_text" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

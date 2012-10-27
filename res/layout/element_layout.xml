@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/element_background"
+    android:orientation="vertical"
+    android:weightSum="480" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/Level1HeadRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:background="@drawable/head_gradient"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:weightSum="320" >
+
+        <ImageView
+            android:id="@+id/element_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:adjustViewBounds="true"
+            android:background="@drawable/back_arrow_background"
+            android:onClick="headBackClick"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/element_danger"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_toRightOf="@+id/element_back_arrow"
+            android:adjustViewBounds="true"
+            android:onClick="headBackClick"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/accepted" />
+
+        <TextView
+            android:id="@+id/element_head_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/head_star"
+            android:layout_toRightOf="@+id/element_danger"
+            android:gravity="left|center_vertical"
+            android:maxLines="2"
+            android:padding="3dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/head_star"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:background="@drawable/star_background"
+            android:onClick="headStarClick"
+            android:padding="3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bookmarks_add" >
+        </ImageView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="430" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/element_name_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/element_text" />
+
+            <TextView
+                android:id="@+id/element_info_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#00000000"
+                android:paddingBottom="3dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/element_text" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_publisher_id"
+        ads:loadAdOnCreate="true" />
+
+</LinearLayout>
