@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,17 +34,28 @@ public class ElementActivity extends Activity {
 		entity.setID(getIntent().getIntExtra("ID", 0));
 		entity.setName(getIntent().getStringExtra("Name"));
 		entity.setNumber(getIntent().getIntExtra("Number", 0));
-		//entity.setText(getIntent().getStringExtra("Text"));
+		// entity.setText(getIntent().getStringExtra("Text"));
 		// entity.setFavorite(getIntent().getBooleanExtra("Favorite", false));
 		entity.setFavorite(AdditivesBaseAdapter.getFavoriteByEntityId(entity
 				.getID()));
-		TextView tv = (TextView) findViewById(R.id.element_info_text);
-		tv.setText(entity.getText());
+		WebView wv = (WebView) findViewById(R.id.element_text);
+		wv.setBackgroundColor(getResources().getColor(
+				R.color.element_background));
+		wv.getSettings().setBuiltInZoomControls(true);
+		if (android.os.Build.VERSION.SDK_INT >= 11) {
+			wv.getSettings().setDisplayZoomControls(false);
+		} else {
+			// Do something different to support older versions
+		}
+		wv.loadDataWithBaseURL(null,
+				"<h2 style=\"color:#5B5B5B\">" + entity.getName() + "</h2>"
+						+ "<p1 style=\"color:#5B5B5B\">" + entity.getText()
+						+ "</p1>", "text/html", "utf-8", null);
 		TextView tv2 = (TextView) findViewById(R.id.element_head_text);
 		StringTokenizer st = new StringTokenizer(entity.getName());
 		tv2.setText(st.nextToken());
-		TextView tv3 = (TextView) findViewById(R.id.element_name_text);
-		tv3.setText(entity.getName());
+		// TextView tv3 = (TextView) findViewById(R.id.element_name_text);
+		// tv3.setText(entity.getName());
 		ImageView im = (ImageView) findViewById(R.id.head_star);
 		if (entity.isFavorite()) {
 			im.setImageResource(R.drawable.bookmarks_main);

@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.sigil.eeda"
     android:installLocation="preferExternal"
-    android:versionCode="102"
-    android:versionName="1.02" >
+    android:versionCode="103"
+    android:versionName="1.03" >
 
     <uses-sdk
         android:minSdkVersion="9"

@@ -84,7 +84,7 @@ public class DeterminesListActivity extends Activity {
 			TextView tv = (TextView) findViewById(R.id.hundreds_head_text);
 			int min = getIntent().getIntExtra("min", 0);
 			int max = getIntent().getIntExtra("max", 0);
-			tv.setText("Å" + min + "-" + max);
+			tv.setText("E" + min + "-" + max);
 			aba.LoadBetween(min, max);
 		}
 		if (getIntent().getIntExtra("filter", AdditivesBaseAdapter.MINMAX) == AdditivesBaseAdapter.FAVORITES) {

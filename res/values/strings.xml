@@ -19,7 +19,7 @@
     <color name="main_background">#EBECEC</color>
 
     <string name="admob_publisher_id">a1506823658c396</string>
-    <string name="version">1.02</string>
+    <string name="version">1.03</string>
     <string name="versiontext">Версия</string>
     <string name="about_text">Информационная программа о пищевых добавках. \n</string>
     <string name="thx_text">Спасибо за использование данного приложения. Если вас не затруднит, оставьте отзыв на play.google.com. В будущем планируется делать ранжирование добавок не по запрещенности/разрешенности, а по степени вредности/опасности для здоровья. 

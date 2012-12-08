@@ -68,20 +68,19 @@ public final class R {
         public static final int MainListViewRightImage=0x7f0a0009;
         public static final int MainListViewTextView=0x7f0a0008;
         public static final int SearchLinearLayout=0x7f0a0003;
-        public static final int about=0x7f0a0014;
+        public static final int about=0x7f0a0013;
         public static final int about_content=0x7f0a0001;
         public static final int aboutscroll=0x7f0a0000;
         public static final int adView=0x7f0a0006;
         public static final int element_back_arrow=0x7f0a000b;
         public static final int element_danger=0x7f0a000c;
         public static final int element_head_text=0x7f0a000d;
-        public static final int element_info_text=0x7f0a0010;
-        public static final int element_name_text=0x7f0a000f;
+        public static final int element_text=0x7f0a000f;
         public static final int head_star=0x7f0a000e;
-        public static final int hundreds_head_text=0x7f0a0011;
+        public static final int hundreds_head_text=0x7f0a0010;
         public static final int mainSearchEditText=0x7f0a0004;
-        public static final int thx_content=0x7f0a0013;
-        public static final int thxscroll=0x7f0a0012;
+        public static final int thx_content=0x7f0a0012;
+        public static final int thxscroll=0x7f0a0011;
     }
     public static final class layout {
         public static final int about=0x7f030000;
